@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,7 +8,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #fbbf24 #1a1a1c;
+  scrollbar-color: #fbbf24 #0a0a0a;
 }
 
 *::-webkit-scrollbar {
@@ -16,7 +16,7 @@
 }
 
 *::-webkit-scrollbar-track {
-  background: #1a1a1c;
+  background: #0a0a0a;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -35,8 +35,8 @@ body {
     "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0a0a0b;
-  color: #fef3c7;
+  background-color: #0a0a0a;
+  color: #fafafa;
 }
 
 code {
@@ -48,42 +48,50 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom selection colors */
+/* Sacred Selection Colors */
 ::selection {
   background: #fbbf24;
-  color: #0a0a0b;
+  color: #0a0a0a;
 }
 
 ::-moz-selection {
   background: #fbbf24;
-  color: #0a0a0b;
+  color: #0a0a0a;
 }
 
-/* Smooth focus transitions */
+/* Sacred Focus States */
 *:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.3);
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.4);
 }
 
-/* Glass morphism utility */
-.glass-effect {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(16px);
+/* Sacred Glass Morphism */
+.sacred-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Text shadow for better readability */
-.text-shadow {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+/* Sacred Text Shadows */
+.sacred-text-shadow {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
-/* Custom button hover effects */
-.btn-glow:hover {
-  box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+/* Sacred Glow Effects */
+.sacred-glow:hover {
+  box-shadow: 0 0 30px rgba(251, 191, 36, 0.5);
 }
 
-/* Gradient text animation */
-@keyframes gradient-shift {
+.enggang-glow:hover {
+  box-shadow: 0 0 25px rgba(251, 191, 36, 0.6);
+}
+
+.spirit-glow:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Sacred Gradient Text Animation */
+@keyframes sacred-gradient {
   0% {
     background-position: 0% 50%;
   }
@@ -95,23 +103,23 @@ html {
   }
 }
 
-.gradient-text-animated {
-  background: linear-gradient(-45deg, #fbbf24, #dc2626, #1e3a8a, #fbbf24);
+.sacred-gradient-text {
+  background: linear-gradient(-45deg, #fbbf24, #dc2626, #fafafa, #fbbf24);
   background-size: 400% 400%;
-  animation: gradient-shift 4s ease infinite;
+  animation: sacred-gradient 6s ease infinite;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Loading states */
-.loading-shimmer {
-  background: linear-gradient(90deg, #1a1a1c 25%, #2a2a2e 50%, #1a1a1c 75%);
+/* Sacred Loading States */
+.sacred-shimmer {
+  background: linear-gradient(90deg, #0a0a0a 25%, #1a1a1a 50%, #0a0a0a 75%);
   background-size: 200% 100%;
-  animation: shimmer 2s infinite;
+  animation: sacred-shimmer 2s infinite;
 }
 
-@keyframes shimmer {
+@keyframes sacred-shimmer {
   0% {
     background-position: -200% 0;
   }
@@ -120,15 +128,97 @@ html {
   }
 }
 
-/* Responsive text sizing */
+/* Sacred Dayak Patterns */
+.dayak-pattern-overlay {
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(220, 38, 38, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(251, 191, 36, 0.05) 0%, transparent 50%);
+}
+
+/* Sacred Scroll Behavior */
+.sacred-scroll {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
+/* Sacred Button Animations */
+.sacred-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.sacred-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.sacred-button:hover::before {
+  left: 100%;
+}
+
+/* Sacred Responsive Text */
 @media (max-width: 640px) {
-  .responsive-text-xl {
-    font-size: 1.125rem;
-  }
-  .responsive-text-2xl {
+  .sacred-responsive-xl {
     font-size: 1.25rem;
   }
-  .responsive-text-3xl {
+  .sacred-responsive-2xl {
     font-size: 1.5rem;
   }
+  .sacred-responsive-3xl {
+    font-size: 1.875rem;
+  }
+}
+
+/* Sacred Dark Mode Enhancements */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0a0a0a;
+  }
+}
+
+/* Sacred Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Sacred Typography Hierarchy */
+.sacred-heading {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.spirit-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.earth-text {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* Sacred Border Gradients */
+.sacred-border {
+  border-image: linear-gradient(45deg, #fbbf24, #dc2626, #fbbf24) 1;
+}
+
+/* Sacred Backdrop Effects */
+.sacred-backdrop {
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(10, 10, 10, 0.8);
 }

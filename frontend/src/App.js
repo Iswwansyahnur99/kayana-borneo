@@ -1,22 +1,22 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Hero from "./components/Hero";
-import ProductCollections from "./components/ProductCollections";
-import VirtualTours from "./components/VirtualTours";
-import CulturalQuests from "./components/CulturalQuests";
-import SocialImpact from "./components/SocialImpact";
-import Footer from "./components/Footer";
+import SacredHero from "./components/SacredHero";
+import SacredCrafts from "./components/SacredCrafts";
+import LaminJourney from "./components/LaminJourney";
+import RitesOfKnowledge from "./components/RitesOfKnowledge";
+import GuardianshipImpact from "./components/GuardianshipImpact";
+import SacredFooter from "./components/SacredFooter";
 
-const Home = () => {
+const SacredHome = () => {
   return (
-    <div className="bg-heritage-dark min-h-screen">
-      <Hero />
-      <ProductCollections />
-      <VirtualTours />
-      <CulturalQuests />
-      <SocialImpact />
-      <Footer />
+    <div className="bg-dayak-forest min-h-screen">
+      <SacredHero />
+      <SacredCrafts />
+      <LaminJourney />
+      <RitesOfKnowledge />
+      <GuardianshipImpact />
+      <SacredFooter />
     </div>
   );
 };
@@ -26,8 +26,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
+          <Route path="/" element={<SacredHome />}>
+            <Route index element={<SacredHome />} />
           </Route>
         </Routes>
       </BrowserRouter>
