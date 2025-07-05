@@ -102,7 +102,7 @@ const SacredCrafts = () => {
             <span className="bg-hornbill-gradient bg-clip-text text-transparent block animate-enggang-soar">
               Artisan Creations
             </span>
-          </h2>
+          </motion.h2>
           <motion.p 
             className="text-xl text-dayak-spirit-soft opacity-90 font-earth max-w-3xl mx-auto mb-8"
             variants={itemVariants}
