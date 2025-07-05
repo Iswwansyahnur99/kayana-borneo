@@ -4,6 +4,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Hero from "./components/Hero";
 import ProductCollections from "./components/ProductCollections";
 import VirtualTours from "./components/VirtualTours";
+import CulturalQuests from "./components/CulturalQuests";
+import SocialImpact from "./components/SocialImpact";
+import Footer from "./components/Footer";
 
 const Home = () => {
   return (
@@ -11,6 +14,9 @@ const Home = () => {
       <Hero />
       <ProductCollections />
       <VirtualTours />
+      <CulturalQuests />
+      <SocialImpact />
+      <Footer />
     </div>
   );
 };
