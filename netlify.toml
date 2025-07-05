@@ -1,0 +1,17 @@
+# File: netlify.toml
+
+# Konfigurasi untuk membangun (build) frontend
+[build]
+  base    = "frontend"
+  command = "npm run build"
+  publish = "frontend/build"
+
+# Konfigurasi untuk backend (functions)
+[functions]
+  directory = "backend"
+
+# Aturan pengalihan untuk memperbaiki error "Page not found" di React
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
